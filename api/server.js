@@ -130,6 +130,19 @@ app.get('/productos', (req, res) => {
     });
 });
 
+app.get('/inventario', (req, res) => {
+    const query = "SELECT * FROM inventario";
+    conexion.query(query, (error, resultado) => {
+        if (error) return console.error(error, message);
+
+        if (resultado.length > 0) {
+            res.json(resultado)
+        } else {
+            res.json("No se encontraron resultados de Inventarios")
+        }
+    });
+});
+
 
 
 
@@ -157,8 +170,6 @@ app.post('/usuarios/agregar', (req, res) => {
 app.post('/negocios/agregar', (req, res) => {
     const negocios = {
         nombre_neg: req.body.nombre_neg,
-        direccion_neg: req.body.direccion_neg,
-        numero_neg: req.body.numero_neg
     }
 
     const query = 'INSERT INTO negocio SET ?';
@@ -172,11 +183,9 @@ app.post('/negocios/agregar', (req, res) => {
 app.post('/locales/agregar', (req, res) => {
     const locales = {
         id_neg: req.body.id_neg,
-        id_prod: req.body.id_prod,
         nombre_local: req.body.nombre_local,
         direccion_local: req.body.direccion_local,
         numero_local: req.body.numero_local,
-        cantidad_prod: req.body.cantidad_prod
     }
 
     const query = 'INSERT INTO locales SET ?';
@@ -243,7 +252,6 @@ app.post('/productos/agregar', (req, res) => {
         descripcion_prod: req.body.descripcion_prod,
         valor_compra: req.body.valor_compra,
         valor_venta: req.body.valor_venta,
-        cantidad: req.body.cantidad
     }
 
     const query = 'INSERT INTO producto SET ?';
@@ -251,6 +259,22 @@ app.post('/productos/agregar', (req, res) => {
         if (error) return console.error(error, message);
 
         res.json("Se registro correctamente el producto");
+    });
+});
+
+app.post('/inventario/agregar', (req, res) => {
+    const inventario = {
+        id_neg: req.body.id_neg,
+        id_local: req.body.id_local,
+        id_prod: req.body.id_prod,
+        cantidad_prod: req.body.cantidad_prod
+    }
+
+    const query = "INSERT INTO inventario SET ?";
+    conexion.query(query, inventario, (error) => {
+        if (error) return console.error(error, message);
+
+        res.json("Se registro correctamente el inventario");
     });
 });
 
