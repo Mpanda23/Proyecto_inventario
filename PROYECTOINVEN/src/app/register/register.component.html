@@ -1,0 +1,41 @@
+<div class="register-form">
+    <h3>Crea tu Cuenta</h3>
+    <div class="form-group">
+      <label for="businessName">Nombre del Negocio</label>
+      <input type="text" id="businessName" [(ngModel)]="businessName" name="businessName" placeholder="Ingresa el nombre de tu negocio" />
+    </div>
+    <div class="form-group">
+      <label for="businessAddress">Dirección del Negocio</label>
+      <input type="text" id="businessAddress" [(ngModel)]="businessAddress" name="businessAddress" placeholder="Ingresa la dirección de tu negocio" />
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Número de Teléfono</label>
+      <input type="text" id="phoneNumber" [(ngModel)]="phoneNumber" name="phoneNumber" placeholder="Ingresa tu número de teléfono" />
+    </div>
+    <label for="userToggle" class="next-step-btn" (click)="nextStep()">Siguiente</label>
+  
+    <div *ngIf="showUserDetails">
+      <div class="form-group">
+        <label for="firstName">Nombre</label>
+        <input type="text" id="firstName" [(ngModel)]="firstName" name="firstName" placeholder="Ingresa tu nombre" />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Apellido</label>
+        <input type="text" id="lastName" [(ngModel)]="lastName" name="lastName" placeholder="Ingresa tu apellido" />
+      </div>
+      <div class="form-group">
+        <label for="emailRegister">Correo Electrónico</label>
+        <input type="email" id="emailRegister" [(ngModel)]="emailRegister" name="emailRegister" placeholder="Ingresa tu correo electrónico" />
+      </div>
+      <div class="form-group">
+        <label for="cellPhone">Teléfono Celular</label>
+        <input type="text" id="cellPhone" [(ngModel)]="cellPhone" name="cellPhone" placeholder="Ingresa tu número de celular" />
+      </div>
+      <div class="form-group">
+        <label for="registerPassword">Contraseña</label>
+        <input type="password" id="registerPassword" [(ngModel)]="registerPassword" name="registerPassword" placeholder="Ingresa tu contraseña" />
+      </div>
+      <button type="submit" class="btn register">Registrarse</button>
+    </div>
+  </div>
+  
