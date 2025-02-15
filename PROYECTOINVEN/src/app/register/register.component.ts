@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class RegisterComponent {
 
-  
-  businessName: string = '';
+
+  /*businessName: string = '';
   businessAddress: string = '';
   phoneNumber: string = '';
   firstName: string = '';
@@ -37,5 +37,5 @@ export class RegisterComponent {
       cellPhone: this.cellPhone,
       registerPassword: this.registerPassword
     });
-  }
+  }*/
 }
