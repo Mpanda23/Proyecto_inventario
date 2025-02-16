@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-register',
+  imports: [CommonModule],
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+
+  showUserDetails: Boolean = false;
 
 
   /*businessName: string = '';
@@ -17,15 +21,15 @@ export class RegisterComponent {
   cellPhone: string = '';
   registerPassword: string = ''; 
 
-  showUserDetails: boolean = false;
+  showUserDetails: boolean = false;*/
 
- 
+
   nextStep() {
     this.showUserDetails = true;
   }
 
-  
-  onSubmit() {
+
+  /*onSubmit() {
     
     console.log({
       businessName: this.businessName,
