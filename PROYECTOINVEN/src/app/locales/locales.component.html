@@ -1,0 +1,25 @@
+<div class="formulario-container">
+    <label for="toggleFormularioLocal" class="btn-agregar-local">Agregar Local</label>
+    <input type="checkbox" id="toggleFormularioLocal" style="display: none;">
+    <div class="formulario-local">
+        <h2>Formulario para Agregar Local</h2>
+        <form id="localForm">
+            <div class="form-group-local">
+                <label for="nombreLocal">Nombre del Local:</label>
+                <input type="text" id="nombreLocal" name="nombreLocal" class="form-control" required>
+            </div>
+
+            <div class="form-group-local">
+                <label for="direccionLocal">Dirección del Local:</label>
+                <input type="text" id="direccionLocal" name="direccionLocal" class="form-control" required>
+            </div>
+
+            <div class="form-group-local">
+                <label for="telefonoLocal">Teléfono del Local:</label>
+                <input type="tel" id="telefonoLocal" name="telefonoLocal" class="form-control" required>
+            </div>
+            <button type="submit" class="btn-formulario-local">Agregar Local</button>
+        </form>
+    </div>
+    <a href="/inicio" class="btn-volver">Volver al Módulo Inicio</a>
+</div>

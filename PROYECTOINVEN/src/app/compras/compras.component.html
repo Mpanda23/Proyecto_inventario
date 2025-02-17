@@ -1,0 +1,32 @@
+
+<div class="formulario-container">
+
+    <label for="toggleFormularioCompra" class="btn-agregar-compra">Agregar Compra</label>
+    
+   
+    <input type="checkbox" id="toggleFormularioCompra" style="display: none;">
+
+  
+    <div class="formulario-compra">
+        <h2>Formulario para Agregar Compra</h2>
+        <form id="compraForm">
+            <div class="form-group-compra">
+                <label for="valorCompra">Valor Compra:</label>
+                <input type="number" id="valorCompra" name="valorCompra" class="form-control" required>
+            </div>
+
+            <div class="form-group-compra">
+                <label for="cantidadCompra">Cantidad Compra:</label>
+                <input type="number" id="cantidadCompra" name="cantidadCompra" class="form-control" required>
+            </div>
+
+            <div class="form-group-compra">
+                <label for="nombreCompra">Nombre de la Compra:</label>
+                <input type="text" id="nombreCompra" name="nombreCompra" class="form-control" required>
+            </div>
+            
+            <button type="submit" class="btn-formulario-compra">Agregar Compra</button>
+        </form>
+    </div>
+    <a href="/inicio" class="btn-volver">Volver al Módulo Inicio</a>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';  
 
 @Component({
   selector: 'app-login',
@@ -6,13 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  isRegistering = false; 
 
-  showRegisterForm() {
-    this.isRegistering = true; 
-  }
+  constructor(private router: Router) { }
 
-  showLoginForm() {
-    this.isRegistering = false; 
+  onLoginClick() {
+    
+    this.router.navigate(['/inicio']);  
   }
 }

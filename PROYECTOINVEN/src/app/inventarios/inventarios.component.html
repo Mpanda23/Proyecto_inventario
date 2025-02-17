@@ -1,0 +1,22 @@
+
+<div class="formulario-container">
+    <label for="toggleFormularioInventario" class="btn-agregar-inventario">Agregar Inventario</label> 
+    <input type="checkbox" id="toggleFormularioInventario" style="display: none;">
+    <div class="formulario-inventario">
+        <h2>Formulario para Agregar Producto</h2>
+        <form id="inventarioForm">
+            <div class="form-group-inventario">
+                <label for="cantidadInventario">Cantidad Producto:</label>
+                <input type="number" id="cantidadInventario" name="cantidadInventario" class="form-control" required>
+            </div>
+
+            <div class="form-group-inventario">
+                <label for="nombreInventario">Nombre Producto:</label>
+                <input type="text" id="nombreInventario" name="nombreInventario" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn-formulario-inventario">Agregar Producto</button>
+        </form>
+    </div>
+    <a href="/inicio" class="btn-volver">Volver al Módulo Inicio</a>
+</div>

@@ -1,0 +1,99 @@
+/* Estilos para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal del formulario */
+.formulario-container {
+    display: flex;
+    flex-direction: column; /* Apilar los elementos */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Estilos para el botón principal que abre el formulario */
+.btn-agregar-negocio {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 20px; /* Para separar el botón del formulario */
+}
+
+.btn-agregar-negocio:hover {
+    background-color: #0056b3;
+}
+
+/* Mostrar formulario cuando el checkbox está marcado */
+#toggleFormulario:checked + .formulario-negocio {
+    display: block;
+}
+
+/* Estilos del formulario */
+.formulario-negocio {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+    display: none;
+    text-align: center;
+}
+
+/* Título del formulario */
+.formulario-negocio h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Estilos de los grupos de formulario */
+.form-group-negocio {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group-negocio label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los inputs */
+.form-group-negocio input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Estilos para el botón dentro del formulario */
+.btn-formulario {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-formulario:hover {
+    background-color: #0056b3;
+}

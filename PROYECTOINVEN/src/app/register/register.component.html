@@ -18,7 +18,7 @@
     </div>
     <label for="userToggle" class="next-step-btn" (click)="nextStep()">Siguiente</label>
 
-    <div *ngIf=" showUserDetails">
+    <div *ngIf="showUserDetails">
       <div class="form-group">
         <label for="firstName">Nombre</label>
         <input class="input" type="text" id="firstName" name="firstName" placeholder="Ingresa tu nombre" />
@@ -41,7 +41,11 @@
         <input class="input" type="password" id="registerPassword" name="registerPassword"
           placeholder="Ingresa tu contraseña" />
       </div>
+      
+     
+      
       <button type="submit" class="btn register">Registrarse</button>
+      <button type="button" class="btn login" onclick="location.href='/login'">¿ Ya Tienes una cuenta?</button>
     </div>
   </div>
 </div>

@@ -1,0 +1,31 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<div class="container">
+  <div class="select-container">
+    <h1>Bienvenido</h1>
+    <p>Has iniciado sesión correctamente.</p>
+    <select id="options" class="btn btn-custom" (change)="redirectToPage($event)">
+      <option value="Selecciona">Selecciona una opción:</option>
+      <option value="negocios">Negocios</option>
+      <option value="locales">Locales</option>
+      <option value="categorias">Categorías</option>
+      <option value="compras">Compras</option>
+      <option value="ventas">Ventas</option>
+      <option value="productos">Productos</option>
+      <option value="inventario">Inventario</option>
+    </select>
+  </div>
+
+  <button class="btn btn-danger" (click)="cerrarSesion()">
+    <i class="fas fa-sign-out-alt"></i> 
+  </button>
+
+  <footer class="footer">
+    <p>&copy; 2025 empresa nn</p>
+    <div class="social-media-icons">
+      <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,129 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .formulario-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .btn-agregar-producto {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .btn-agregar-producto:hover {
+        background-color: #0056b3;
+    }
+
+    #toggleFormularioProducto:checked + .formulario-producto {
+        display: block;
+    }
+
+    .formulario-producto {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 350px;
+        display: none;
+        text-align: center;
+    }
+
+    .formulario-producto h2 {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    .form-group-producto {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .form-group-producto label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .form-group-producto input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .btn-formulario-producto {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .btn-formulario-producto:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="formulario-container">
+    <!-- Botón de activación -->
+    <label for="toggleFormularioProducto" class="btn-agregar-producto">Agregar Producto</label>
+    
+    <!-- Checkbox para mostrar el formulario -->
+    <input type="checkbox" id="toggleFormularioProducto" style="display: none;">
+
+    <!-- Formulario que se muestra cuando se activa el checkbox -->
+    <div class="formulario-producto">
+        <h2>Formulario para Agregar Producto</h2>
+        <form id="productoForm">
+            <div class="form-group-producto">
+                <label for="nombreProducto">Nombre Producto:</label>
+                <input type="text" id="nombreProducto" name="nombreProducto" class="form-control" required>
+            </div>
+
+            <div class="form-group-producto">
+                <label for="descripcionProducto">Descripción Producto:</label>
+                <input type="text" id="descripcionProducto" name="descripcionProducto" class="form-control" required>
+            </div>
+
+            <div class="form-group-producto">
+                <label for="valorCompra">Valor Compra:</label>
+                <input type="number" id="valorCompra" name="valorCompra" class="form-control" required>
+            </div>
+
+            <div class="form-group-producto">
+                <label for="valorVenta">Valor Venta:</label>
+                <input type="number" id="valorVenta" name="valorVenta" class="form-control" required>
+            </div>
+            
+            <button type="submit" class="btn-formulario-producto">Agregar Producto</button>
+        </form>
+    </div>
+    <a href="/inicio" class="btn-volver">Volver al Módulo Inicio</a>
+</div>
